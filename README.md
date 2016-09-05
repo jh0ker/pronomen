@@ -18,6 +18,15 @@ welcher dann in der Überschrift der Seite verwendet werden kann:
 ### Was es nicht werden soll
 Die Website soll keine "Aufklärungswebsite" werden. Gedacht ist sie für Menschen, die bereits eine Vorstellung davon haben, warum es diese Pronomen gibt. 
 
+Außerdem möchte ich es vermeiden, irgendwelche personenbezogenen Daten (in Form von Benutzerkonten o.ä.) zu speichern. 
+Keine Sicherheitsmaßnahmen sind absolut sicher gegen Angriffe. 
+Eine Datenbank zu führen, welche in den falschen Händen für bösartige Zwecke wie Cybermobbing oder, 
+ohne den sprichwörtlichen Teufel an die Wand malen zu wollen, schlimmeres verwendet werden könnte, wäre mir eine zu große Verantwortung.
+
+Auch eine Monetarisierung in Form von Werbung kommt für mich nicht in Frage. 
+Sollten die Betriebskosten irgendwann meine Mittel übersteigen, werde ich eine Refinanzierung durch Spenden in Betracht ziehen. 
+Vorerst wird dies aber nicht nötig sein. 
+
 ### Mitwirken
 Es wird möglich sein, neue Pronomen in Form von JSON-Dateien zur Website hinzuzufügen. 
 Dazu werde ich hier ein Schema verlinken, welches einfach ausgefüllt und als PR eingereicht oder mir auf anderem Wege zugesandt werden muss. 
