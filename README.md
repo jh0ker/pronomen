@@ -41,7 +41,7 @@ Dieses Projekt ist unter der [GNU AGPL 3](https://github.com/jh0ker/pronomen/blo
 Mein Name ist Jannes. Ich kenne (soweit mir bewusst) nur einen nicht-binären Menschen und das auch nur aus dem Internet. 
 They schickte mir einen Link zu der oben genannten Australischen Website und da ich sie extrem hilfreich fand, fragte ich mich, ob es sowas auch für die deutsche Sprache gibt.
 Ich stöberte ein bisschen durch Google und fand einige Blogs, Artikel und ähnliches zu dem Thema, jedoch keine vergleichbare Website. 
-Daher beschloss ich, einfach mal bei [einem dieser Blogs](http://nonbinarytransgermany.tumblr.com/) zu fragen.
+Daher beschloss ich, einfach mal bei [einem dieser Blogs](http://nonbinarytransgermany.tumblr.com/) zu [fragen](http://nonbinarytransgermany.tumblr.com/post/149933458186/hallo-ich-hei%C3%9Fe-jannes-bin-21-und-cism%C3%A4nnlich).
 Auch dort war niemandem eine solche Website bekannt, sodass ich dieses Projekt angelegt habe.
 
 Obwohl ich mir Mühe gebe, geschlechtsneutrale Sprache bzw. die bevorzugten Pronomen zu verwenden, ist es natürlich möglich, dass mir Fehler unterlaufen. 
