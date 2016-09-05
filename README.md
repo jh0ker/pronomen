@@ -13,7 +13,7 @@ Praktisch wäre das, um das von sich selbst bevorzugte Pronomen möglichst einfa
 Vielleicht wird es eine Option geben, einen (Spitz-)Namen in diesen Link zu integrieren, 
 welcher dann in der Überschrift der Seite verwendet werden kann: 
 
-***Jannes** bevorzugt das Pronomen "er"*
+*__Jannes__ bevorzugt das Pronomen "er"*
 
 ### Was es nicht werden soll
 Die Website soll keine "Aufklärungswebsite" werden. Gedacht ist sie für Menschen, die bereits eine Vorstellung davon haben, warum es diese Pronomen gibt. 
