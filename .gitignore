@@ -97,3 +97,7 @@ include/
 lib64
 pip-selfcheck.json
 cherrypy/
+
+# Django
+db.sqlite3
+site/static
