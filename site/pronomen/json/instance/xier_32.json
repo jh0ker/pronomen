@@ -1,0 +1,27 @@
+{
+  "schema_id": "schema.0.1",
+  "schema_description": "Hauptschema für die Definition eines Pronomen",
+
+  "id": "xier_32",
+  "name": "xier",
+  "version": "3.2",
+  "phonetic": "[ksi:ɐ̯] -- Reimt sich auf ~Tier~",
+  "description": "Sehr verbreitetes und ausgearbeitetes Pronomen in der Version 3.2.",
+
+  "author": "Anna Heger",
+  "source": "[Blogeintrag auf annaheger.wordpress.com](https://annaheger.wordpress.com/2013/09/16/pronomen-ohne-geschlecht-3-2/)",
+
+  "children": [ "xier_32/personal", "xier_32/relativ_demonstrativ", "xier_32/possessiv" ],
+
+  "questions": [
+    "xier_32/questions/q01",
+    "xier_32/questions/q02",
+    "xier_32/questions/q03",
+    "xier_32/questions/q04",
+    "xier_32/questions/q05",
+    "xier_32/questions/q06",
+    "xier_32/questions/q07",
+    "xier_32/questions/q08",
+    "xier_32/questions/q09"
+  ]
+}

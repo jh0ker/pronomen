@@ -1,0 +1,10 @@
+{
+  "schema_id": "case.0.1",
+  "schema_description": "Schema für einen Fall",
+
+  "type": "dativ",
+
+  "text": "diem",
+  "phonetic": "",
+  "example": "Das gehört diem Sarah. Sarah, diem das gehört, ..."
+}

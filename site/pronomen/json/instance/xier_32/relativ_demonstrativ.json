@@ -1,0 +1,16 @@
+{
+  "schema_id": "pronoun.0.1",
+  "schema_description": "Schema für ein Personalpronomen, Relativpronomen, Possessivpronomen oder einen Artikel",
+
+  "type": ["relativ", "demonstrativ"],
+
+  "text": "dier",
+  "phonetic": "[di:ɐ̯] -- Reimt sich auf ~Tier~",
+  "note": "",
+
+  "children": [
+    "relativ_demonstrativ/nominativ",
+    "relativ_demonstrativ/genitiv",
+    "relativ_demonstrativ/dativ",
+    "relativ_demonstrativ/akkusativ" ]
+}

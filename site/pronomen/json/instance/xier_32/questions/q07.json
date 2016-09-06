@@ -1,0 +1,8 @@
+{
+  "schema_id": "question.0.1",
+  "schema_description": "Schema für eine Quizfrage",
+
+  "text": "Ich bin sicher, das ist die Katze von __.",
+  "answer": "xiem",
+  "hint": "Die Katze von wem?"
+}

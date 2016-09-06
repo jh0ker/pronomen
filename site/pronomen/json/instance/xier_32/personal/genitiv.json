@@ -1,0 +1,10 @@
+{
+  "schema_id": "case.0.1",
+  "schema_description": "Schema für einen Fall",
+
+  "type": "genitiv",
+
+  "text": "xies",
+  "phonetic": "",
+  "example": "Wessen schäme ich mich? Ich schäme mich xies."
+}

@@ -1,0 +1,10 @@
+{
+  "schema_id": "case.0.1",
+  "schema_description": "Schema für einen Fall",
+
+  "type": "akkusativ",
+
+  "text": "xiesen",
+  "phonetic": "",
+  "example": "Xier sucht xiesen Freund."
+}

@@ -1,0 +1,12 @@
+{
+  "schema_id": "genus.0.1",
+  "schema_description": "Schema für ein Genus",
+
+  "type": "neutrum",
+
+  "text": "",
+  "phonetic": "",
+  "note": "",
+
+  "children": [ "neutrum/nominativ", "neutrum/genitiv", "neutrum/dativ", "neutrum/akkusativ" ]
+}

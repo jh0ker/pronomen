@@ -1,0 +1,12 @@
+{
+  "schema_id": "pronoun.0.1",
+  "schema_description": "Schema für ein Personalpronomen, Relativpronomen, Possessivpronomen oder einen Artikel",
+
+  "type": "possessiv",
+
+  "text": "xies",
+  "phonetic": "[ksi:z] -- Reimt sich auf ~lies~",
+  "note": "Der [Abschnitt über Possessivpronomen im Originalartikel](https://annaheger.wordpress.com/2013/09/16/pronomen-ohne-geschlecht-3-2/#possessivp) enthält ein paar vereinfachende Regeln, die dir das Auswendiglernen ersparen können.",
+
+  "children": [ "possessiv/maskulinum", "possessiv/femininum", "possessiv/neutrum", "possessiv/alternativ" ]
+}

@@ -1,0 +1,8 @@
+{
+  "schema_id": "question.0.1",
+  "schema_description": "Schema für eine Quizfrage",
+
+  "text": "__ hat fast alle Fragen richtig beantwortet.",
+  "answer": "xier",
+  "hint": "Wer hat die Fragen beantwortet?"
+}

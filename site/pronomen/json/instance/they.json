@@ -1,0 +1,17 @@
+{
+  "schema_version": "schema.0.1",
+  "schema_description": "Hauptschema für die Definition eines Pronomen",
+
+  "id": "they",
+  "name": "they",
+  "version": "",
+  "phonetic": "[ðeɪ] (Englisch ausgesprochen)",
+  "description": "Im englischsprachigen Raum ist das als Singular benutzte they [sehr beliebt](http://cassolotl.tumblr.com/post/137953257500) und wird auch im deutschsprachigen Raum verwendet. Mehr infos gibt es von [minus18](https://minus18.org.au/pronouns-app/).",
+
+  "author": "",
+  "source": "",
+
+  "children": [ ],
+
+  "questions": [ ]
+}

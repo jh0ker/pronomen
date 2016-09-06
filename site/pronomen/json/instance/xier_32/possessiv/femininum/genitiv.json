@@ -1,0 +1,10 @@
+{
+  "schema_id": "case.0.1",
+  "schema_description": "Schema für einen Fall",
+
+  "type": "genitiv",
+
+  "text": "xieser",
+  "phonetic": "",
+  "example": "Xies schämt sich xieser Freundin."
+}

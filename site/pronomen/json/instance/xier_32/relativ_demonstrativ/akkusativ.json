@@ -1,0 +1,10 @@
+{
+  "schema_id": "case.0.1",
+  "schema_description": "Schema für einen Fall",
+
+  "type": "akkusativ",
+
+  "text": "dien",
+  "phonetic": "",
+  "example": "Du brauchst dien Sascha. Sascha, dien ich brauche, ..."
+}

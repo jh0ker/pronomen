@@ -1,0 +1,10 @@
+{
+  "schema_id": "case.0.1",
+  "schema_description": "Schema für einen Fall",
+
+  "type": "nominativ",
+
+  "text": "xiesir",
+  "phonetic": "",
+  "example": "Xiesir Freund* schreibt etwas."
+}

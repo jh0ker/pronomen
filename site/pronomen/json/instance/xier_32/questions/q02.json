@@ -1,0 +1,8 @@
+{
+  "schema_id": "question.0.1",
+  "schema_description": "Schema für eine Quizfrage",
+
+  "text": "Ich glaube, ich habe mich in __ verguckt.",
+  "answer": "xien",
+  "hint": "In wen hast du dich verguckt?"
+}

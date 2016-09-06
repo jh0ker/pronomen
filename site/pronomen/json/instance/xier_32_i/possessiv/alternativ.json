@@ -1,0 +1,12 @@
+{
+  "schema_id": "genus.0.1",
+  "schema_description": "Schema für ein Genus",
+
+  "type": "alternativ.0.1",
+
+  "text": "",
+  "phonetic": "",
+  "note": "Im Quellartikel werden, zusätzlich zu Femininum, Maskulinum und Neutrum, =zwei= weitere grammatikalische Geschlechter anerkannt. Da sich die Deklination nicht unterscheidet, werden sie hier zusammengefasst.",
+
+  "children": [ "alternativ/nominativ", "alternativ/genitiv", "alternativ/dativ", "alternativ/akkusativ" ]
+}

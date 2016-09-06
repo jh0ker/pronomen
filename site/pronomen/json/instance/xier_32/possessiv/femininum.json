@@ -1,0 +1,12 @@
+{
+  "schema_id": "genus.0.1",
+  "schema_description": "Schema für ein Genus",
+
+  "type": "femininum",
+
+  "text": "",
+  "phonetic": "",
+  "note": "",
+
+  "children": [ "femininum/nominativ", "femininum/genitiv", "femininum/dativ", "femininum/akkusativ" ]
+}

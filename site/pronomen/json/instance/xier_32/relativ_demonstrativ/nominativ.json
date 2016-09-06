@@ -1,0 +1,10 @@
+{
+  "schema_id": "case.0.1",
+  "schema_description": "Schema für einen Fall",
+
+  "type": "nominativ",
+
+  "text": "dier",
+  "phonetic": "",
+  "example": "Dier Jona schreibt. Jona, dier schreibt, ..."
+}

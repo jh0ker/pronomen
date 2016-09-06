@@ -1,0 +1,12 @@
+{
+  "schema_id": "pronoun.0.1",
+  "schema_description": "Schema für ein Personalpronomen, Relativpronomen, Possessivpronomen oder einen Artikel",
+
+  "type": "personal",
+
+  "text": "xier",
+  "phonetic": "[ksi:ɐ̯] -- Reimt sich auf ~Tier~",
+  "note": "",
+
+  "children": [ "personal/nominativ", "personal/genitiv", "personal/dativ", "personal/akkusativ" ]
+}

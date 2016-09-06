@@ -1,0 +1,10 @@
+{
+  "schema_id": "case.0.1",
+  "schema_description": "Schema für einen Fall",
+
+  "type": "dativ",
+
+  "text": "xieser",
+  "phonetic": "",
+  "example": "Das gehört xieser Freundin."
+}
