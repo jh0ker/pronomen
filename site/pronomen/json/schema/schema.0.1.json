@@ -1,0 +1,17 @@
+{
+  "schema_id": "schema.0.1",
+  "schema_description": "Hauptschema für die Definition eines Pronomen",
+
+  "id": "",
+  "name": "",
+  "version": "",
+  "phonetic": "",
+  "description": "",
+
+  "author": "",
+  "source": "",
+
+  "children": [ ],
+
+  "questions": [ ]
+}

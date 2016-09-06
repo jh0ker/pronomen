@@ -1,0 +1,48 @@
+{% extends "pronomen_app/base.html" %}
+
+{% block title %}Detailansicht{% endblock %}
+
+{% block page_title %}{{pronoun.name}} {{ pronoun.version }}{% endblock %}
+
+{% block content %}
+{% autoescape off %}
+<article>
+    {% for type in pronoun.children %}
+    <header class="clearfix"><h2>{{ type.text }} – {{ type.metadata.name }}</h2></header>
+    <section>
+        {{ type.phonetic }}
+        {% for subtype in type.children %}
+
+        {% if subtype.schema_id == 'case.0.1' %}
+            <header class="clearfix"><h3>{{ subtype.text }} – {{ subtype.metadata.name }}</h3></header>
+            <section>
+
+            </section>
+
+        {% elif subtype.schema_id == 'genus.0.1' %}
+            <header class="clearfix"><h3>{{ subtype.metadata.name }}</h3></header>
+            <section>
+                {% for subsubtype in subtype.children %}
+                    {{ subsubtype.metadata.name }}: {{ subsubtype.text }},
+                {% endfor %}
+                <p>{{ subtype.note }}</p>
+            </section>
+
+        {% endif %}
+        {% endfor %}
+        <p>{{ type.note }}</p>
+    </section>
+    {% endfor %}
+</article>
+
+<aside>
+    <header class="clearfix"><h1>{{ pronoun.name }}</h1></header>
+    <section>
+        <h2>{{ pronoun.version }}</h2>
+        <p>{{ pronoun.phonetic }}</p>
+        <p>{{ pronoun.description }}</p>
+        <p>{{ pronoun.author }} – {{ pronoun.source }}</p>
+    </section>
+</aside>
+{% endautoescape %}
+{% endblock %}

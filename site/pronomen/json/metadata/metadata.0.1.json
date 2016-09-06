@@ -1,0 +1,269 @@
+{
+  "personal": {
+    "name": "Personalpronomen",
+    "description": "Persönliches Fürwort",
+    "example": "=Ich= gehe zur Wiese.",
+
+    "nominativ": {
+      "name": "Nominativ",
+      "description": "1. Fall",
+      "gendered": "er/sie/es",
+      "question": "Wer oder was?",
+      "example": "=Er/Sie/Es= sitzt auf der Wiese."
+    },
+
+    "genitiv": {
+      "name": "Genitiv",
+      "description": "2. Fall",
+      "gendered": "seiner/ihrer/seiner",
+      "question": "Wessen?",
+      "example": "Wir gedenken =seiner/ihrer/seiner=."
+    },
+
+    "dativ": {
+      "name": "Dativ",
+      "description": "3. Fall",
+      "gendered": "ihm/ihr/ihm",
+      "question": "Wem?",
+      "example": "Wir geben =ihm/ihr/ihm= das Geschenk."
+    },
+
+    "akkusativ": {
+      "name": "Akkusativ",
+      "description": "4. Fall",
+      "gendered": "ihn/sie/es",
+      "question": "Wen oder was?",
+      "example": "Wir fragen =ihn/sie/es=."
+    }
+  },
+
+  "relativ": {
+    "name": "Relativpronomen",
+    "description": "Bezügliches Fürwort",
+    "example": "Dort ist eine Wiese, =die= grün ist.",
+
+    "nominativ": {
+      "name": "Nominativ",
+      "description": "1. Fall",
+      "gendered": "der/die/das",
+      "question": "Wer oder was?",
+      "example": "der Mann, =der=.../die Frau, =die=.../das Kind, =das=..."
+    },
+
+    "genitiv": {
+      "name": "Genitiv",
+      "description": "2. Fall",
+      "gendered": "dessen/deren/dessen",
+      "question": "Wessen?",
+      "example": "der Mann, =dessen=.../die Frau, =deren=.../das Kind, =dessen=..."
+    },
+
+    "dativ": {
+      "name": "Dativ",
+      "description": "3. Fall",
+      "gendered": "dem/der/dem",
+      "question": "Wem?",
+      "example": "Wir geben es dem Mann, =dem=/der Frau, =der=/dem Kind, =dem= wir es geben."
+    },
+
+    "akkusativ": {
+      "name": "Akkusativ",
+      "description": "4. Fall",
+      "gendered": "ihn/sie/es",
+      "question": "Wen oder was?",
+      "example": "Da ist der Mann, =den=/die Frau, =die=/das Kind, =das= wir fragen wollten."
+    }
+  },
+
+  "demonstrativ": {
+    "name": "Demonstrativpronomen",
+    "description": "Artikel/Hinweisendes Fürwort",
+    "example": "Dort ist =die= Wiese, die grün ist.",
+
+    "nominativ": {
+      "name": "Nominativ",
+      "description": "1. Fall",
+      "gendered": "der/die/das",
+      "question": "Wer oder was?",
+      "example": "Das ist =der= Mann, der.../=die= Frau, die.../=das= Kind, das..."
+    },
+
+    "genitiv": {
+      "name": "Genitiv",
+      "description": "2. Fall",
+      "gendered": "dessen/deren/dessen",
+      "question": "Wessen?",
+      "example": "Wir gedenken besonders =dessen/deren/dessen= Schwester, da..."
+    },
+
+    "dativ": {
+      "name": "Dativ",
+      "description": "3. Fall",
+      "gendered": "dem/der/dem",
+      "question": "Wem?",
+      "example": "Wir geben =dem= Mann/=der= Frau/=dem= Kind das Geschenk."
+    },
+
+    "akkusativ": {
+      "name": "Akkusativ",
+      "description": "4. Fall",
+      "gendered": "ihn/sie/es",
+      "question": "Wen oder was?",
+      "example": "Da ist der Mann, =den=/die Frau, =die=/das Kind, =das= wir fragen wollten."
+    }
+  },
+
+  "possessiv": {
+    "name": "Possessivpronomen",
+    "description": "Besitzanzeigendes Fürwort. Endung abhängig vom Fall und vom Genum des ~zugehörigen~.",
+    "example": "Das ist =meine= Wiese und =mein= Auto.",
+
+    "maskulinum": {
+      "name": "Maskulinum",
+      "description": "Grammatisches Geschlecht männlich (=Der= Vater)",
+
+      "nominativ": {
+        "name": "Nominativ",
+        "description": "1. Fall",
+        "gendered": "sein/ihr/sein",
+        "question": "Wer oder was?",
+        "example": "Das ist =sein/ihr/sein= Vater."
+      },
+
+      "genitiv": {
+        "name": "Genitiv",
+        "description": "2. Fall",
+        "gendered": "seines/ihres/seines",
+        "question": "Wessen?",
+        "example": "Wir gedenken =seines/ihres/seines= Vaters."
+      },
+
+      "dativ": {
+        "name": "Dativ",
+        "description": "3. Fall",
+        "gendered": "seinem/ihrem/seinem",
+        "question": "Wem?",
+        "example": "Das ist das Geschenk von =seinem/ihrem/seinem= Vater."
+      },
+
+      "akkusativ": {
+        "name": "Akkusativ",
+        "description": "4. Fall",
+        "gendered": "seinen/ihren/seinen",
+        "question": "Wen oder was?",
+        "example": "Wir fragen =seinen/ihren/seinen= Vater."
+      }
+    },
+
+    "femininum": {
+      "name": "Femininum",
+      "description": "Grammatisches Geschlecht weiblich (=Die= Mutter)",
+
+      "nominativ": {
+        "name": "Nominativ",
+        "description": "1. Fall",
+        "gendered": "seine/ihre/seine",
+        "question": "Wer oder was?",
+        "example": "Das ist =seine/ihre/seine= Mutter."
+      },
+
+      "genitiv": {
+        "name": "Genitiv",
+        "description": "2. Fall",
+        "gendered": "seiner/ihrer/seiner",
+        "question": "Wessen?",
+        "example": "Wir gedenken =seiner/ihrer/seiner= Mutter."
+      },
+
+      "dativ": {
+        "name": "Dativ",
+        "description": "3. Fall",
+        "gendered": "seiner/ihrer/seiner",
+        "question": "Wem?",
+        "example": "Das ist das Geschenk von =seiner/ihrer/seiner= Mutter."
+      },
+
+      "akkusativ": {
+        "name": "Akkusativ",
+        "description": "4. Fall",
+        "gendered": "seine/ihre/seine",
+        "question": "Wen oder was?",
+        "example": "Wir fragen =seine/ihre/seine= Mutter."
+      }
+    },
+
+    "neutrum": {
+      "name": "Neutrum",
+      "description": "Grammatisches Geschlecht sachlich (=Das= Kind)",
+
+      "nominativ": {
+        "name": "Nominativ",
+        "description": "1. Fall",
+        "gendered": "sein/ihr/sein",
+        "question": "Wer oder was?",
+        "example": "Das ist =sein/ihr/sein= Kind."
+      },
+
+      "genitiv": {
+        "name": "Genitiv",
+        "description": "2. Fall",
+        "gendered": "seiner/ihrer/seiner",
+        "question": "Wessen?",
+        "example": "Wir gedenken =seines/ihres/seines= Kindes."
+      },
+
+      "dativ": {
+        "name": "Dativ",
+        "description": "3. Fall",
+        "gendered": "seinem/ihrem/seinem",
+        "question": "Wem?",
+        "example": "Das ist das Geschenk von =seinem/ihrem/seinem= Kind."
+      },
+
+      "akkusativ": {
+        "name": "Akkusativ",
+        "description": "4. Fall",
+        "gendered": "sein/ihr/sein",
+        "question": "Wen oder was?",
+        "example": "Wir fragen =sein/ihr/sein= Kind."
+      }
+    },
+
+    "alternativ": {
+      "name": "Geschlechterneutral",
+      "description": "Neu hinzukommendes Genum",
+
+      "nominativ": {
+        "name": "Nominativ",
+        "description": "1. Fall",
+        "gendered": "",
+        "question": "Wer oder was?",
+        "example": ""
+      },
+
+      "genitiv": {
+        "name": "Genitiv",
+        "description": "2. Fall",
+        "gendered": "s",
+        "question": "Wessen?",
+        "example": ""
+      },
+
+      "dativ": {
+        "name": "Dativ",
+        "description": "3. Fall",
+        "gendered": "",
+        "question": "Wem?",
+        "example": ""
+      },
+
+      "akkusativ": {
+        "name": "Akkusativ",
+        "description": "4. Fall",
+        "gendered": "",
+        "question": "Wen oder was?",
+        "example": ""
+      }
+    }
+  }
+}

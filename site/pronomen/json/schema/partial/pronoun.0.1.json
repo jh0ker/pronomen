@@ -1,0 +1,12 @@
+{
+  "schema_id": "pronoun.0.1",
+  "schema_description": "Schema für ein Personalpronomen, Relativpronomen, Possessivpronomen oder einen Artikel",
+
+  "type": "",
+
+  "text": "",
+  "phonetic": "",
+  "note": "",
+
+  "children": [ ]
+}

@@ -1,0 +1,28 @@
+{% extends "pronomen_app/base.html" %}
+
+{% block title %}Übersicht{% endblock %}
+
+{% block page_title %}Übersicht{% endblock %}
+
+{% block nav_home %}<!-- hide on home page -->{% endblock %}
+
+{% block content %}
+{% autoescape off %}
+<article>
+    {% for pronoun in pronouns.values %}
+    <header class="clearfix">
+        <a href="{{ pronoun.id }}"><h2>{{ pronoun.name }} {{ pronoun.version }}</h2></a>
+        <h3>{{ pronoun.description }}</h3>
+    </header>
+    {% endfor %}
+</article>
+
+<aside>
+    <header class="clearfix"><h1>Willkommen</h1></header>
+    <section>
+        <p>Dies hier ist der erste Prototyp.</p>
+        <p>Lies dir hier durch, worum es geht: <a href="https://github.com/jh0ker/pronomen#pronomen-arbeitstitel">GitHub-Projekt</a> </p>
+    </section>
+</aside>
+{% endautoescape %}
+{% endblock %}

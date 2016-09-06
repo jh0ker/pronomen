@@ -1,0 +1,162 @@
+{
+  "schema_version": "full.0",
+  "id": "Eindeutige, maschinenlesbare Bezeichnung",
+  "name": "Anzeigename/Wortstamm",
+  "variation": "Variante oder Version",
+  "phonetic": "Aussprache",
+  "description": "Beschreibung",
+  "author": "Name des_der Originalautor_in",
+  "source": "Quellenangabe",
+  "personal": {
+    "base": "Grundform/Anzeigename Personalpronomen",
+    "nominativ": {
+      "case": "Wer-Fall",
+      "phonetic": "Aussprache",
+      "example": "Beispielsatz"
+    },
+    "genitiv": {
+      "case": "Wessen-Fall",
+      "phonetic": "Aussprache",
+      "example": "Beispielsatz"
+    },
+    "dativ": {
+      "case": "Wem-Fall",
+      "phonetic": "Aussprache",
+      "example": "Beispielsatz"
+    },
+    "akkusativ": {
+      "case": "Wen-Fall",
+      "phonetic": "Aussprache",
+      "example": "Beispielsatz"
+    },
+    "note": "Anmerkung Personalpronomen"
+  },
+  "artikel_relativ": {
+    "base": "Grundform/Anzeigename Artikel und Relativpronomen",
+    "nominativ": {
+      "case": "Wer-Fall",
+      "phonetic": "Aussprache",
+      "example": "Beispielsatz"
+    },
+    "genitiv": {
+      "case": "Wessen-Fall",
+      "phonetic": "Aussprache",
+      "example": "Beispielsatz"
+    },
+    "dativ": {
+      "case": "Wem-Fall",
+      "phonetic": "Aussprache",
+      "example": "Beispielsatz"
+    },
+    "akkusativ": {
+      "case": "Wen-Fall",
+      "phonetic": "Aussprache",
+      "example": "Beispielsatz"
+    },
+    "note": "Anmerkung Artikel und Relativpronomen"
+  },
+  "possessiv": {
+    "base": "Grundform/Anzeigename Possessivpronomen",
+    "maskulinum": {
+      "nominativ": {
+        "case": "Wer-Fall (mit maskulinum)",
+        "phonetic": "Aussprache",
+        "example": "Beispielsatz"
+      },
+      "genitiv": {
+        "case": "Wessen-Fall",
+        "phonetic": "Aussprache",
+        "example": "Beispielsatz"
+      },
+      "dativ": {
+        "case": "Wem-Fall",
+        "phonetic": "Aussprache",
+        "example": "Beispielsatz"
+      },
+      "akkusativ": {
+        "case": "Wen-Fall",
+        "phonetic": "Aussprache",
+        "example": "Beispielsatz"
+      }
+    },
+    "femininum": {
+      "nominativ": {
+        "case": "Wer-Fall (mit femininum)",
+        "phonetic": "Aussprache",
+        "example": "Beispielsatz"
+      },
+      "genitiv": {
+        "case": "Wessen-Fall",
+        "phonetic": "Aussprache",
+        "example": "Beispielsatz"
+      },
+      "dativ": {
+        "case": "Wem-Fall",
+        "phonetic": "Aussprache",
+        "example": "Beispielsatz"
+      },
+      "akkusativ": {
+        "case": "Wen-Fall",
+        "phonetic": "Aussprache",
+        "example": "Beispielsatz"
+      }
+    },
+    "neutrum": {
+      "nominativ": {
+        "case": "Wer-Fall (mit neutrum)",
+        "phonetic": "Aussprache",
+        "example": "Beispielsatz"
+      },
+      "genitiv": {
+        "case": "Wessen-Fall",
+        "phonetic": "Aussprache",
+        "example": "Beispielsatz"
+      },
+      "dativ": {
+        "case": "Wem-Fall",
+        "phonetic": "Aussprache",
+        "example": "Beispielsatz"
+      },
+      "akkusativ": {
+        "case": "Wen-Fall",
+        "phonetic": "Aussprache",
+        "example": "Beispielsatz"
+      }
+    },
+    "fourth": {
+      "nominativ": {
+        "case": "Wer-Fall (mit sich selbst)",
+        "phonetic": "Aussprache",
+        "example": "Beispielsatz"
+      },
+      "genitiv": {
+        "case": "Wessen-Fall",
+        "phonetic": "Aussprache",
+        "example": "Beispielsatz"
+      },
+      "dativ": {
+        "case": "Wem-Fall",
+        "phonetic": "Aussprache",
+        "example": "Beispielsatz"
+      },
+      "akkusativ": {
+        "case": "Wen-Fall",
+        "phonetic": "Aussprache",
+        "example": "Beispielsatz"
+      }
+    },
+    "note": "Anmerkung Possessivpronomen"
+  },
+  "quiz": [
+    {
+      "question": "Das ist __ Hund.",
+      "answer": "ihr",
+      "hint": "Hinweis, z. B. gesuchter Fall/Deklination"
+    },
+    {
+      "question": "__ kann beliebig viele Fragen hinzufügen.",
+      "answer": "er",
+      "hint": "Hinweis, z. B. gesuchter Fall/Deklination"
+    }
+  ]
+}
