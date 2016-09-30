@@ -4,6 +4,7 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+    background-color: #fdfdfd;
 }
 
 ::-moz-selection {
@@ -196,6 +197,11 @@ aside a:visited {
 .pronoun {
     background-color: #fcd9ca;
     padding: 15px;
+
+    border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    border: 0 solid #000000;
 }
 
 .pronoun h2, .pronoun h3, .pronoun h4,
@@ -207,6 +213,12 @@ aside a:visited {
 .cases {
     text-align: center;
     margin-bottom: 10px;
+
+    border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 5px 5px;
+    overflow: hidden;
+    border: 0 solid #000000;
 }
 
 .cases-header {
@@ -214,6 +226,19 @@ aside a:visited {
     font-size: 18px;
     font-weight: 500;
     overflow: hidden;
+    margin-bottom: 20px;
+
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 0 solid #000000;
+}
+
+.by-genus {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 0 solid #000000;
 }
 
 .case {
@@ -240,6 +265,10 @@ aside a:visited {
 
 .genus {
     display: block;
+    border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    border: 0 solid #000000;
 }
 
 .maskulinum {

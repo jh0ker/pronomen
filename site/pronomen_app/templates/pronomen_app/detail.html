@@ -16,7 +16,7 @@
     </div>
 
     {% for type in pronoun.children %}
-    <header class="clearfix pronoun">
+    <header class="clearfix pronoun {% if type.type == 'possessiv' %} by-genus {% endif %}">
         <h2>{{ type.text }} – {{ type.metadata.name }}</h2>
         <h4>{{ type.phonetic }}</h4>
 
@@ -26,12 +26,15 @@
     </header>
 
     {% if type.type == 'possessiv' %}
-    <div class="cases cases-header clearfix">
+    <!-- <div class="cases cases-header clearfix">
         <div class="case nominativ">Nominativ</div>
         <div class="case genitiv">Genitiv</div>
         <div class="case dativ">Dativ</div>
         <div class="case akkusativ">Akkusativ</div>
-    </div>
+    </div> -->
+    <section>
+        <div class="cases clearfix"></div>
+    </section>
     {% endif %}
 
     <section>
@@ -66,6 +69,13 @@
         </div>
     </section>
     {% endfor %}
+
+    <div class="cases cases-header clearfix">
+        <div class="case nominativ">Nominativ</div>
+        <div class="case genitiv">Genitiv</div>
+        <div class="case dativ">Dativ</div>
+        <div class="case akkusativ">Akkusativ</div>
+    </div>
 
 </article>
 
