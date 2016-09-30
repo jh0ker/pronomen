@@ -213,6 +213,7 @@ aside a:visited {
     font-family: "Roboto Slab", serif;
     font-size: 18px;
     font-weight: 500;
+    overflow: hidden;
 }
 
 .case {
