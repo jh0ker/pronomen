@@ -70,18 +70,18 @@ body {
    =================== */
 
 .header-container {
-    border-bottom: 20px solid #e44d26;
+    border-bottom: 20px solid #333;
 }
 
 .footer-container,
 .main aside {
-    border-top: 20px solid #e44d26;
+    border-top: 20px solid #333;
 }
 
 .header-container,
 .footer-container,
 .main aside {
-    background: #f16529;
+    background: #555;
 }
 
 .title {
@@ -108,7 +108,7 @@ nav a {
     font-weight: bold;
 
     color: white;
-    background: #e44d26;
+    background: #333;
 }
 
 nav a:hover,
@@ -189,13 +189,73 @@ aside a:visited {
 
 
 .footer-container footer {
-    box-shadow: 0 500px 0 500px #f16529;
+    box-shadow: 0 500px 0 500px #555;
 }
 
 
+.pronoun {
+    background-color: #fcd9ca;
+    padding: 15px;
+}
 
+.pronoun h2, .pronoun h3, .pronoun h4,
+.cases h2, .cases h3, .cases h4 {
+    margin: 0;
+    padding: 0;
+}
 
+.cases {
+    text-align: center;
+    margin-bottom: 10px;
+}
 
+.cases-header {
+    font-family: "Roboto Slab", serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.case {
+    width: 25%;
+    display: block;
+    float: left;
+}
+
+.nominativ {
+    background: orange;
+}
+
+.genitiv {
+    background: lightblue;
+}
+
+.dativ {
+    background: lightgreen;
+}
+
+.akkusativ {
+    background: lightpink;
+}
+
+.genus {
+    display: block;
+}
+
+.maskulinum {
+    background: lightcyan;
+}
+
+.femininum {
+    background: lightgoldenrodyellow;
+}
+
+.neutrum {
+    background: lightgray;
+}
+
+.alternativ {
+    background: #fad6fa;
+}
 
 
 /* ==========================================================================

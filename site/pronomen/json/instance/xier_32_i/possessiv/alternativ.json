@@ -2,7 +2,7 @@
   "schema_id": "genus.0.1",
   "schema_description": "Schema für ein Genus",
 
-  "type": "alternativ.0.1",
+  "type": "alternativ",
 
   "text": "",
   "phonetic": "",

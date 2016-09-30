@@ -7,32 +7,66 @@
 {% block content %}
 {% autoescape off %}
 <article>
+
+    <div class="cases cases-header clearfix">
+        <div class="case nominativ">Nominativ</div>
+        <div class="case genitiv">Genitiv</div>
+        <div class="case dativ">Dativ</div>
+        <div class="case akkusativ">Akkusativ</div>
+    </div>
+
     {% for type in pronoun.children %}
-    <header class="clearfix"><h2>{{ type.text }} – {{ type.metadata.name }}</h2></header>
+    <header class="clearfix pronoun">
+        <h2>{{ type.text }} – {{ type.metadata.name }}</h2>
+        <h4>{{ type.phonetic }}</h4>
+
+        {% if type.note %}
+        <p>{{ type.note }}</p>
+        {% endif %}
+    </header>
+
+    {% if type.type == 'possessiv' %}
+    <div class="cases cases-header clearfix">
+        <div class="case nominativ">Nominativ</div>
+        <div class="case genitiv">Genitiv</div>
+        <div class="case dativ">Dativ</div>
+        <div class="case akkusativ">Akkusativ</div>
+    </div>
+    {% endif %}
+
     <section>
-        {{ type.phonetic }}
+
+        <div class="cases clearfix">
         {% for subtype in type.children %}
 
-        {% if subtype.schema_id == 'case.0.1' %}
-            <header class="clearfix"><h3>{{ subtype.text }} – {{ subtype.metadata.name }}</h3></header>
-            <section>
 
-            </section>
+        {% if subtype.schema_id == 'case.0.1' %}
+            <div class="case {{ subtype.type }}">
+                {{ subtype.text }}
+            </div>
 
         {% elif subtype.schema_id == 'genus.0.1' %}
-            <header class="clearfix"><h3>{{ subtype.metadata.name }}</h3></header>
-            <section>
-                {% for subsubtype in subtype.children %}
-                    {{ subsubtype.metadata.name }}: {{ subsubtype.text }},
-                {% endfor %}
+            <div class="genus {{ subtype.type }} clearfix">
+                <h3>{{ subtype.metadata.name }}</h3>
+                {% if subtype.note %}
                 <p>{{ subtype.note }}</p>
-            </section>
+                {% endif %}
+            </div>
+
+            <div class="cases clearfix">
+            {% for subsubtype in subtype.children %}
+                <div class="case {{ subsubtype.type }}">
+                    {{ subsubtype.text }}
+                </div>
+            {% endfor %}
+            </div>
 
         {% endif %}
         {% endfor %}
-        <p>{{ type.note }}</p>
+        </div>
     </section>
     {% endfor %}
+
 </article>
 
 <aside>
