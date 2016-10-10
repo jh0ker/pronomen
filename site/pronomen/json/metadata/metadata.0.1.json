@@ -244,7 +244,7 @@
       "genitiv": {
         "name": "Genitiv",
         "description": "2. Fall",
-        "gendered": "s",
+        "gendered": "",
         "question": "Wessen?",
         "example": ""
       },
