@@ -71,18 +71,18 @@ body {
    =================== */
 
 .header-container {
-    border-bottom: 20px solid #333;
+    border-bottom: 20px solid #434A54;
 }
 
 .footer-container,
 .main aside {
-    border-top: 20px solid #333;
+    border-top: 20px solid #434A54;
 }
 
 .header-container,
 .footer-container,
 .main aside {
-    background: #555;
+    background: #656D78;
 }
 
 .title {
@@ -109,7 +109,7 @@ nav a {
     font-weight: bold;
 
     color: white;
-    background: #333;
+    background: #434A54;
 }
 
 nav a:hover,
@@ -190,7 +190,7 @@ aside a:visited {
 
 
 .footer-container footer {
-    box-shadow: 0 500px 0 500px #555;
+    box-shadow: 0 500px 0 500px #656D78;
 }
 
 
@@ -360,11 +360,12 @@ aside a:visited {
     .main article {
         float: left;
         width: 57%;
+        position: relative;
     }
 
     .main aside {
         float: right;
-        width: 28%;
+        width: 40%;
     }
 }
 

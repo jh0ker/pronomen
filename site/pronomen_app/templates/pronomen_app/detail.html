@@ -7,76 +7,79 @@
 {% block content %}
 {% autoescape off %}
 <article>
-
-    <div class="cases cases-header clearfix">
-        <div class="case nominativ">Nominativ</div>
-        <div class="case genitiv">Genitiv</div>
-        <div class="case dativ">Dativ</div>
-        <div class="case akkusativ">Akkusativ</div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Legende</h3>
+        </div>
+        <div class="panel-body">
+            <div class="btn-group btn-group-justified" role="group" aria-label="foobar">
+                <div class="btn-group" role="group"><button type="button" class="btn btn-warning">Nominativ</button></div>
+                <div class="btn-group" role="group"><button type="button" class="btn btn-primary">Genitiv</button></div>
+                <div class="btn-group" role="group"><button type="button" class="btn btn-success">Dativ</button></div>
+                <div class="btn-group" role="group"><button type="button" class="btn btn-danger">Akkusativ</button></div>
+            </div>
+        </div>
     </div>
 
     {% for type in pronoun.children %}
-    <header class="clearfix pronoun {% if type.type == 'possessiv' %} by-genus {% endif %}">
-        <h2>{{ type.text }} – {{ type.metadata.name }}</h2>
-        <h4>{{ type.phonetic }}</h4>
 
-        {% if type.note %}
-        <p>{{ type.note }}</p>
-        {% endif %}
-    </header>
-
-    {% if type.type == 'possessiv' %}
-    <!-- <div class="cases cases-header clearfix">
-        <div class="case nominativ">Nominativ</div>
-        <div class="case genitiv">Genitiv</div>
-        <div class="case dativ">Dativ</div>
-        <div class="case akkusativ">Akkusativ</div>
-    </div> -->
-    <section>
-        <div class="cases clearfix"></div>
-    </section>
-    {% endif %}
-
-    <section>
-
-        <div class="cases clearfix">
-        {% for subtype in type.children %}
-
-
-        {% if subtype.schema_id == 'case.0.1' %}
-            <div class="case {{ subtype.type }}">
-                {{ subtype.text }}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{ type.text }} – {{ type.metadata.name }}</h3>
+                {{ type.phonetic }}
             </div>
+            <div class="panel-body">
 
-        {% elif subtype.schema_id == 'genus.0.1' %}
-            <div class="genus {{ subtype.type }} clearfix">
-                <h3>{{ subtype.metadata.name }}</h3>
-                {% if subtype.note %}
-                <p>{{ subtype.note }}</p>
+                {% if type.type == 'possessiv' %} <!-- Possessivpronomen werden nach Genus unterteilt -->
+                    {% for subtype in type.children %}
+                        <div class="panel panel-{% if subtype.type == 'maskulinum' %}warning{% elif subtype.type == 'femininum' %}info{% elif subtype.type == 'neutrum' %}success{% elif subtype.type == 'alternativ' %}danger{% endif %}">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">{{ subtype.metadata.name }}</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="btn-group btn-group-justified" role="group" aria-label="foobar">
+                                    {% for subsubtype in subtype.children %}
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-{% if subsubtype.type == 'nominativ' %}warning{% elif subsubtype.type == 'genitiv' %}primary{% elif subsubtype.type == 'dativ' %}success{% elif subsubtype.type == 'akkusativ' %}danger{% endif %}">
+                                                    {{ subsubtype.text }}
+                                                </button>
+                                            </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+
+                {% else %}
+                    <div class="btn-group btn-group-justified" role="group" aria-label="foobar">
+                        {% for subtype in type.children %}
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-{% if subtype.type == 'nominativ' %}warning{% elif subtype.type == 'genitiv' %}primary{% elif subtype.type == 'dativ' %}success{% elif subtype.type == 'akkusativ' %}danger{% endif %}">
+                                        {{ subtype.text }}
+                                    </button>
+                                </div>
+                        {% endfor %}
+                    </div>
                 {% endif %}
             </div>
-
-            <div class="cases clearfix">
-            {% for subsubtype in subtype.children %}
-                <div class="case {{ subsubtype.type }}">
-                    {{ subsubtype.text }}
-                </div>
-            {% endfor %}
-            </div>
-
-        {% endif %}
-        {% endfor %}
         </div>
-    </section>
+
     {% endfor %}
 
-    <div class="cases cases-header clearfix">
-        <div class="case nominativ">Nominativ</div>
-        <div class="case genitiv">Genitiv</div>
-        <div class="case dativ">Dativ</div>
-        <div class="case akkusativ">Akkusativ</div>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="btn-group btn-group-justified" role="group" aria-label="foobar">
+                <div class="btn-group" role="group"><button type="button" class="btn btn-warning">Nominativ</button></div>
+                <div class="btn-group" role="group"><button type="button" class="btn btn-primary">Genitiv</button></div>
+                <div class="btn-group" role="group"><button type="button" class="btn btn-success">Dativ</button></div>
+                <div class="btn-group" role="group"><button type="button" class="btn btn-danger">Akkusativ</button></div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <h3 class="panel-title">Legende</h3>
+        </div>
     </div>
-
 </article>
 
 <aside>
