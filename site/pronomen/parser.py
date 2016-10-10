@@ -62,26 +62,23 @@ def resolve_references(pronouns):
     return resolved
 
 
-def assign_metadata(pronouns, metadata):
+def assign_metadata(pronouns, metadata, path):
+    if isinstance(pronouns, dict) and 'type' in pronouns.keys():
+        if isinstance(pronouns['type'], list):
+            path.append(pronouns['type'][0])
+        else:
+            path.append(pronouns['type'])
 
-    if isinstance(pronouns, dict) and not isinstance(metadata, str):
-        for pkey in list(pronouns):
-            if pkey == 'type':
-                for mkey in list(metadata):
-                    if mkey == pronouns[pkey] or mkey in pronouns[pkey]:
-                        # print("found")
-                        pronouns['metadata'] = metadata[mkey]
-                        # print(pronouns['metadata'])
+        meta = metadata
 
-                    assign_metadata(pronouns, metadata[mkey])
+        for node in path:
+            meta = meta[node]
 
-            assign_metadata(pronouns[pkey], metadata)
+        pronouns['metadata'] = meta
 
-    elif isinstance(pronouns, list) and not isinstance(metadata, str):
-        for entry in pronouns:
-            assign_metadata(entry, metadata)
-    else:
-        return
+    if isinstance(pronouns, dict) and 'children' in pronouns.keys():
+        for entry in pronouns['children']:
+            assign_metadata(entry, metadata, path[:])
 
 
 def load_metadata(pronouns):
@@ -93,7 +90,8 @@ def load_metadata(pronouns):
                 metadata_version = splitext(file)[0].partition('.')[2]
                 metadata[metadata_version] = json.load(fp)
 
-    assign_metadata(pronouns, metadata['0.1'])
+    for pronoun in pronouns.values():
+        assign_metadata(pronoun, metadata['0.1'], list())
 
 
 def convert(markdown):
@@ -129,7 +127,7 @@ def parse_markdown(pronouns):
             parse_markdown(pronouns[k])
 
 
-def parse_all():
+def parse_pronouns():
     pronouns = dict()
 
     load_files(pronouns)
@@ -141,6 +139,8 @@ def parse_all():
     for key in list(pronouns.keys()):
         if '/' in key:
             del pronouns[key]
+
+    # pprint(pronouns)
 
     load_metadata(pronouns)
 
