@@ -25,24 +25,86 @@
 
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">{{ type.text }} – {{ type.metadata.name }}</h3>
+                <h3 class="panel-title">{{ type.text }} – {{ type.metadata.name }}
+                    {% if type.note %}
+                        <button type="button" class="btn btn-default btn-xs pull-right" data-toggle="modal" data-target="#note-{{ type.metadata.name }}"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></button>
+                        <div class="modal fade" id="note-{{ type.metadata.name }}" tabindex="-1" role="dialog" aria-labelledby="note-{{ type.metadata.name }}">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title">Notiz</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        {{ type.note }}
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                </h3>
                 {{ type.phonetic }}
             </div>
             <div class="panel-body">
 
                 {% if type.type == 'possessiv' %} <!-- Possessivpronomen werden nach Genus unterteilt -->
                     {% for subtype in type.children %}
+                        <div class="modal fade" id="note-{{ subtype.metadata.name }}" tabindex="-1" role="dialog" aria-labelledby="note-{{ type.metadata.name }}">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title">Notiz</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        {{ subtype.note }}
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="panel panel-{% if subtype.type == 'maskulinum' %}warning{% elif subtype.type == 'femininum' %}info{% elif subtype.type == 'neutrum' %}success{% elif subtype.type == 'alternativ' %}danger{% endif %}">
                             <div class="panel-heading">
-                                <h3 class="panel-title">{{ subtype.metadata.name }}</h3>
+                                <h3 class="panel-title">{{ subtype.metadata.name }}
+                                {% if subtype.note %}
+                                    <button type="button" class="btn btn-default btn-xs pull-right" data-toggle="modal" data-target="#note-{{ subtype.metadata.name }}"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></button>
+                                {% endif %}
+                                </h3>
                             </div>
                             <div class="panel-body">
                                 <div class="btn-group btn-group-justified" role="group" aria-label="foobar">
                                     {% for subsubtype in subtype.children %}
                                             <div class="btn-group" role="group">
-                                                <button type="button" class="btn btn-{% if subsubtype.type == 'nominativ' %}warning{% elif subsubtype.type == 'genitiv' %}primary{% elif subsubtype.type == 'dativ' %}success{% elif subsubtype.type == 'akkusativ' %}danger{% endif %}">
+                                                <button type="button" class="btn btn-{% if subsubtype.type == 'nominativ' %}warning{% elif subsubtype.type == 'genitiv' %}primary{% elif subsubtype.type == 'dativ' %}success{% elif subsubtype.type == 'akkusativ' %}danger{% endif %}" data-toggle="modal" data-target="#info-{{ type.metadata.name }}-{{ subtype.metadata.name }}-{{ subsubtype.metadata.name }}">
                                                     {{ subsubtype.text }}
                                                 </button>
+                                                <div class="modal fade" id="info-{{ type.metadata.name }}-{{ subtype.metadata.name }}-{{ subsubtype.metadata.name }}" tabindex="-1" role="dialog" aria-labelledby="note-{{ type.metadata.name }}">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                                <h4 class="modal-title">{{ type.metadata.name }} <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> {{ subtype.metadata.name }} <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> {{ subsubtype.metadata.name }}</h4>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <ul class="list-group">
+                                                                    {% if subsubtype.phonetic %}<li class="list-group-item">Lautschrift: {{ subsubtype.phonetic }} </li>{% endif %}
+                                                                    {% if subsubtype.metadata.question %}<li class="list-group-item">Testfrage: {{ subsubtype.metadata.question }} </li>{% endif %}
+                                                                    {% if subsubtype.metadata.gendered %}<li class="list-group-item">Traditionelle Pronomen: {{ subsubtype.metadata.gendered }} </li>{% endif %}
+                                                                    {% if subsubtype.metadata.example %}<li class="list-group-item">Beispielsatz (traditionell): {{ subsubtype.metadata.example }} </li>{% endif %}
+                                                                    {% if subsubtype.example %}<li class="list-group-item">Beispielsatz (alternativ): {{ subsubtype.example }} </li>{% endif %}
+                                                                </ul>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                     {% endfor %}
                                 </div>
@@ -55,9 +117,31 @@
                     <div class="btn-group btn-group-justified" role="group" aria-label="foobar">
                         {% for subtype in type.children %}
                                 <div class="btn-group" role="group">
-                                    <button type="button" class="btn btn-{% if subtype.type == 'nominativ' %}warning{% elif subtype.type == 'genitiv' %}primary{% elif subtype.type == 'dativ' %}success{% elif subtype.type == 'akkusativ' %}danger{% endif %}">
+                                    <button type="button" class="btn btn-{% if subtype.type == 'nominativ' %}warning{% elif subtype.type == 'genitiv' %}primary{% elif subtype.type == 'dativ' %}success{% elif subtype.type == 'akkusativ' %}danger{% endif %}" data-toggle="modal" data-target="#info-{{ type.metadata.name }}-{{ subtype.metadata.name }}">
                                         {{ subtype.text }}
                                     </button>
+                                    <div class="modal fade" id="info-{{ type.metadata.name }}-{{ subtype.metadata.name }}" tabindex="-1" role="dialog" aria-labelledby="note-{{ type.metadata.name }}">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                    <h4 class="modal-title">{{ type.metadata.name }} <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> {{ subtype.metadata.name }} ({{ subtype.metadata.description }})</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <ul class="list-group">
+                                                        {% if subtype.phonetic %}<li class="list-group-item">Lautschrift: {{ subtype.phonetic }} </li>{% endif %}
+                                                        {% if subtype.metadata.question %}<li class="list-group-item">Testfrage: {{ subtype.metadata.question }} </li>{% endif %}
+                                                        {% if subtype.metadata.gendered %}<li class="list-group-item">Traditionelle Pronomen: {{ subtype.metadata.gendered }} </li>{% endif %}
+                                                        {% if subtype.metadata.example %}<li class="list-group-item">Beispielsatz (traditionell): {{ subtype.metadata.example }} </li>{% endif %}
+                                                        {% if subtype.example %}<li class="list-group-item">Beispielsatz (alternativ): {{ subtype.example }} </li>{% endif %}
+                                                    </ul>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                         {% endfor %}
                     </div>
