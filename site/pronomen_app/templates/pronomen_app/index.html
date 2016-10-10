@@ -11,8 +11,8 @@
 <article>
     {% for pronoun in pronouns.values %}
     <header class="clearfix">
-        <a href="{{ pronoun.id }}"><h2>{{ pronoun.name }} {{ pronoun.version }}</h2></a>
-        <h3>{{ pronoun.description }}</h3>
+        <a href="{{ pronoun.id }}"><h3>{{ pronoun.name }} {{ pronoun.version }}</h3></a>
+        <p>{{ pronoun.description }}</p>
     </header>
     {% endfor %}
 </article>
