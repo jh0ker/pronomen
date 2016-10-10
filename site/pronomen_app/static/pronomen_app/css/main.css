@@ -171,11 +171,11 @@ h2, h3, h4 {
 
 a {
     color: inherit;
+    text-decoration: underline;
 }
 
-a:hover,
-a:visited {
-    color: #222;
+a:hover {
+    color: #555;
 }
 
 a:hover {
@@ -192,101 +192,6 @@ aside a:visited {
 .footer-container footer {
     box-shadow: 0 500px 0 500px #656D78;
 }
-
-
-.pronoun {
-    background-color: #fcd9ca;
-    padding: 15px;
-
-    border-radius: 5px 5px 0 0;
-    -moz-border-radius: 5px 5px 0 0;
-    -webkit-border-radius: 5px 5px 0 0;
-    border: 0 solid #000000;
-}
-
-.pronoun h2, .pronoun h3, .pronoun h4,
-.cases h2, .cases h3, .cases h4 {
-    margin: 0;
-    padding: 0;
-}
-
-.cases {
-    text-align: center;
-    margin-bottom: 10px;
-
-    border-radius: 0 0 5px 5px;
-    -moz-border-radius: 0 0 5px 5px;
-    -webkit-border-radius: 0 0 5px 5px;
-    overflow: hidden;
-    border: 0 solid #000000;
-}
-
-.cases-header {
-    font-family: "Roboto Slab", serif;
-    font-size: 18px;
-    font-weight: 500;
-    overflow: hidden;
-    margin-bottom: 20px;
-
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border: 0 solid #000000;
-}
-
-.by-genus {
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border: 0 solid #000000;
-}
-
-.case {
-    width: 25%;
-    display: block;
-    float: left;
-}
-
-.nominativ {
-    background: orange;
-}
-
-.genitiv {
-    background: lightblue;
-}
-
-.dativ {
-    background: lightgreen;
-}
-
-.akkusativ {
-    background: lightpink;
-}
-
-.genus {
-    display: block;
-    border-radius: 5px 5px 0 0;
-    -moz-border-radius: 5px 5px 0 0;
-    -webkit-border-radius: 5px 5px 0 0;
-    border: 0 solid #000000;
-}
-
-.maskulinum {
-    background: lightcyan;
-}
-
-.femininum {
-    background: lightgoldenrodyellow;
-}
-
-.neutrum {
-    background: lightgray;
-}
-
-.alternativ {
-    background: #fad6fa;
-}
-
 
 /* ==========================================================================
    Media Queries
