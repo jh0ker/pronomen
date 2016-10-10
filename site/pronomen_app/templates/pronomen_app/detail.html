@@ -178,7 +178,7 @@
         <h2>{{ pronoun.version }}</h2>
         <p>{{ pronoun.phonetic }}</p>
         <p>{{ pronoun.description }}</p>
-        <p>{{ pronoun.author }} – {{ pronoun.source }}</p>
+        <p>{{ pronoun.author }}{% if pronoun.author %}{% if pronoun.source %} –{% endif %}{% endif %} {{ pronoun.source }}</p>
     </section>
 </aside>
 {% endautoescape %}
